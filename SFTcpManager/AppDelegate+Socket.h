@@ -6,7 +6,6 @@
 //  Copyright © 2017年 Soffice. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate (Socket)

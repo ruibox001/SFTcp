@@ -129,7 +129,7 @@
 #pragma - mark - 连接断开
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
-    SLOG(@"socketDidDisconnect:%p withError: %@ ->> times: %ld", sock, err,self.reconnectTimes);
+    SLOG(@"socketDidDisconnect:%p withError: %@ ->> times: %ld", sock, err,(long)self.reconnectTimes);
     self.connect = NO;
     for (id delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(tcpSocket:connectStatus:)]) {

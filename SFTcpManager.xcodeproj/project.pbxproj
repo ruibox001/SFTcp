@@ -15,9 +15,9 @@
 		9AAAA1821F5E934A00479999 /* SFTcpManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA1811F5E934A00479999 /* SFTcpManagerTests.m */; };
 		9AAAA18D1F5E934A00479999 /* SFTcpManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA18C1F5E934A00479999 /* SFTcpManagerUITests.m */; };
 		9AAAA1A51F5E948C00479999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAA1A41F5E948C00479999 /* Main.storyboard */; };
-		9ABE37931F676C5300365B72 /* AppDelegate+Socket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE378E1F676C5300365B72 /* AppDelegate+Socket.m */; };
 		9ABE37941F676C5300365B72 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */; };
 		9ABE37951F676C5300365B72 /* TcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE37921F676C5300365B72 /* TcpSocket.m */; };
+		9ABE37981F6772B200365B72 /* AppDelegate+Socket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE37971F6772B200365B72 /* AppDelegate+Socket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +54,12 @@
 		9AAAA18C1F5E934A00479999 /* SFTcpManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTcpManagerUITests.m; sourceTree = "<group>"; };
 		9AAAA18E1F5E934A00479999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AAAA1A41F5E948C00479999 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9ABE378D1F676C5300365B72 /* AppDelegate+Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Socket.h"; sourceTree = "<group>"; };
-		9ABE378E1F676C5300365B72 /* AppDelegate+Socket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Socket.m"; sourceTree = "<group>"; };
 		9ABE378F1F676C5300365B72 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		9ABE37911F676C5300365B72 /* TcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpSocket.h; sourceTree = "<group>"; };
 		9ABE37921F676C5300365B72 /* TcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TcpSocket.m; sourceTree = "<group>"; };
+		9ABE37961F6772B200365B72 /* AppDelegate+Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Socket.h"; sourceTree = "<group>"; };
+		9ABE37971F6772B200365B72 /* AppDelegate+Socket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Socket.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,8 @@
 		9AAAA1661F5E934A00479999 /* SFTcpManager */ = {
 			isa = PBXGroup;
 			children = (
+				9ABE37961F6772B200365B72 /* AppDelegate+Socket.h */,
+				9ABE37971F6772B200365B72 /* AppDelegate+Socket.m */,
 				9AAAA16A1F5E934A00479999 /* AppDelegate.h */,
 				9AAAA16B1F5E934A00479999 /* AppDelegate.m */,
 				9AAAA16D1F5E934A00479999 /* ViewController.h */,
@@ -153,8 +155,6 @@
 		9ABE378C1F676C5300365B72 /* SFTcp */ = {
 			isa = PBXGroup;
 			children = (
-				9ABE378D1F676C5300365B72 /* AppDelegate+Socket.h */,
-				9ABE378E1F676C5300365B72 /* AppDelegate+Socket.m */,
 				9ABE378F1F676C5300365B72 /* GCDAsyncSocket.h */,
 				9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */,
 				9ABE37911F676C5300365B72 /* TcpSocket.h */,
@@ -302,9 +302,9 @@
 				9ABE37951F676C5300365B72 /* TcpSocket.m in Sources */,
 				9AAAA16F1F5E934A00479999 /* ViewController.m in Sources */,
 				9ABE37941F676C5300365B72 /* GCDAsyncSocket.m in Sources */,
+				9ABE37981F6772B200365B72 /* AppDelegate+Socket.m in Sources */,
 				9AAAA16C1F5E934A00479999 /* AppDelegate.m in Sources */,
 				9AAAA1691F5E934A00479999 /* main.m in Sources */,
-				9ABE37931F676C5300365B72 /* AppDelegate+Socket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
