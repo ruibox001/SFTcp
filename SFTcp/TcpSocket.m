@@ -33,6 +33,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         udpInstance = [super allocWithZone:zone];
+        udpInstance.handle = [[SocketBgAutoHandler alloc] init];
     });
     return udpInstance;
 }

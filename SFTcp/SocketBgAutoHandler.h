@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Soffice. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface AppDelegate (Socket)
+@interface SocketBgAutoHandler : NSObject
 
 @end

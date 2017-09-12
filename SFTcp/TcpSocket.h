@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SocketBgAutoHandler.h"
 
 //公用日志打印LOG
 #ifdef DEBUG
@@ -27,6 +28,8 @@
 @end
 
 @interface TcpSocket : NSObject
+
+@property (nonatomic, strong) SocketBgAutoHandler *handle;
 
 #pragma mark - tcp单利
 + (instancetype) shareTcpSocket;
