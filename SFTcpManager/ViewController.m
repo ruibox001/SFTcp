@@ -46,7 +46,7 @@
     }
     
     //获取发送内容
-    NSString *msg = self.sendMsgTextField.text;
+    NSString *msg = [NSString stringWithFormat:@"%@\r\n",self.sendMsgTextField.text];
     if (msg.length == 0) {
         [self showAlertWithMessage:@"请先输入发送内容"];
         return;
