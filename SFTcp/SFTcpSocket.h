@@ -19,16 +19,21 @@
 
 @class SFTcpSocket;
 
+#pragma mark - 代理定义
 @protocol SFTcpSocketDelegate <NSObject>
 @optional
 
+#pragma mark - 代理收到数据回调
 - (void)tcpSocket:(SFTcpSocket *)udpSocket receverData:(NSString *)data;
+
+#pragma mark - 代理连接状态变化回调
 - (void)tcpSocket:(SFTcpSocket *)udpSocket connectStatus:(BOOL)connect;
 
 @end
 
 @interface SFTcpSocket : NSObject
 
+#pragma mark - 处理类
 @property (nonatomic, strong) SocketBgAutoHandler *handle;
 
 #pragma mark - tcp单利
