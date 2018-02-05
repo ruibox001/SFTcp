@@ -8,9 +8,8 @@
 
 #import "SocketBgAutoHandler.h"
 #import <objc/runtime.h>
-#import "TcpSocket.h"
+#import "SFTcpSocket.h"
 #import <UIKit/UIKit.h>
-#import "TcpSocket.h"
 
 @implementation SocketBgAutoHandler
 
@@ -31,17 +30,17 @@
 
 //自定义替换实现该方法
 - (void)socket_applicationDidEnterBackground:(UIApplication *)application {
-    [[TcpSocket shareTcpSocket].handle applicationSocketWithEnterBackground:YES];
-    if ([[TcpSocket shareTcpSocket].handle respondsToSelector:@selector(socket_applicationDidEnterBackground:)]) {
-        [[TcpSocket shareTcpSocket].handle performSelector:@selector(socket_applicationDidEnterBackground:) withObject:application];
+    [[SFTcpSocket shareTcpSocket].handle applicationSocketWithEnterBackground:YES];
+    if ([[SFTcpSocket shareTcpSocket].handle respondsToSelector:@selector(socket_applicationDidEnterBackground:)]) {
+        [[SFTcpSocket shareTcpSocket].handle performSelector:@selector(socket_applicationDidEnterBackground:) withObject:application];
     }
 }
 
 //自定义替换实现该方法
 - (void)socket_applicationWillEnterForeground:(UIApplication *)application {
-    [[TcpSocket shareTcpSocket].handle applicationSocketWithEnterBackground:NO];
-    if ([[TcpSocket shareTcpSocket].handle respondsToSelector:@selector(socket_applicationWillEnterForeground:)]) {
-        [[TcpSocket shareTcpSocket].handle performSelector:@selector(socket_applicationWillEnterForeground:) withObject:application];
+    [[SFTcpSocket shareTcpSocket].handle applicationSocketWithEnterBackground:NO];
+    if ([[SFTcpSocket shareTcpSocket].handle respondsToSelector:@selector(socket_applicationWillEnterForeground:)]) {
+        [[SFTcpSocket shareTcpSocket].handle performSelector:@selector(socket_applicationWillEnterForeground:) withObject:application];
     }
     
 }
@@ -62,12 +61,12 @@
 - (void) applicationSocketWithEnterBackground:(BOOL)enter {
     NSLog(@"是否进入后台：%d",enter);
     if (enter) {
-        if([TcpSocket shareTcpSocket].isConnected){
-            [[TcpSocket shareTcpSocket] disConnect];
+        if([SFTcpSocket shareTcpSocket].isConnected){
+            [[SFTcpSocket shareTcpSocket] disConnect];
         }
     }
     else {
-        [[TcpSocket shareTcpSocket] reConnect];
+        [[SFTcpSocket shareTcpSocket] reConnect];
     }
 }
 

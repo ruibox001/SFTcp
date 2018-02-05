@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34D7F60D20280837004900C3 /* SFTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D7F60B20280837004900C3 /* SFTcpSocket.m */; };
 		9AAAA1691F5E934A00479999 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA1681F5E934A00479999 /* main.m */; };
 		9AAAA16C1F5E934A00479999 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA16B1F5E934A00479999 /* AppDelegate.m */; };
 		9AAAA16F1F5E934A00479999 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA16E1F5E934A00479999 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		9AAAA18D1F5E934A00479999 /* SFTcpManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAA18C1F5E934A00479999 /* SFTcpManagerUITests.m */; };
 		9AAAA1A51F5E948C00479999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAA1A41F5E948C00479999 /* Main.storyboard */; };
 		9ABE37941F676C5300365B72 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */; };
-		9ABE37951F676C5300365B72 /* TcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE37921F676C5300365B72 /* TcpSocket.m */; };
 		9ABE379B1F67746900365B72 /* SocketBgAutoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE379A1F67746900365B72 /* SocketBgAutoHandler.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34D7F60B20280837004900C3 /* SFTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTcpSocket.m; sourceTree = "<group>"; };
+		34D7F60C20280837004900C3 /* SFTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTcpSocket.h; sourceTree = "<group>"; };
 		9AAAA1641F5E934A00479999 /* SFTcpManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFTcpManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAAA1681F5E934A00479999 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AAAA16A1F5E934A00479999 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		9AAAA1A41F5E948C00479999 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9ABE378F1F676C5300365B72 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		9ABE37911F676C5300365B72 /* TcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpSocket.h; sourceTree = "<group>"; };
-		9ABE37921F676C5300365B72 /* TcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TcpSocket.m; sourceTree = "<group>"; };
 		9ABE37991F67746900365B72 /* SocketBgAutoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketBgAutoHandler.h; sourceTree = "<group>"; };
 		9ABE379A1F67746900365B72 /* SocketBgAutoHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketBgAutoHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,10 +155,10 @@
 			children = (
 				9ABE378F1F676C5300365B72 /* GCDAsyncSocket.h */,
 				9ABE37901F676C5300365B72 /* GCDAsyncSocket.m */,
-				9ABE37911F676C5300365B72 /* TcpSocket.h */,
-				9ABE37921F676C5300365B72 /* TcpSocket.m */,
 				9ABE37991F67746900365B72 /* SocketBgAutoHandler.h */,
 				9ABE379A1F67746900365B72 /* SocketBgAutoHandler.m */,
+				34D7F60C20280837004900C3 /* SFTcpSocket.h */,
+				34D7F60B20280837004900C3 /* SFTcpSocket.m */,
 			);
 			path = SFTcp;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 		9AAAA15C1F5E934A00479999 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "王声远";
 				TargetAttributes = {
 					9AAAA1631F5E934A00479999 = {
@@ -299,8 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ABE37951F676C5300365B72 /* TcpSocket.m in Sources */,
 				9ABE379B1F67746900365B72 /* SocketBgAutoHandler.m in Sources */,
+				34D7F60D20280837004900C3 /* SFTcpSocket.m in Sources */,
 				9AAAA16F1F5E934A00479999 /* ViewController.m in Sources */,
 				9ABE37941F676C5300365B72 /* GCDAsyncSocket.m in Sources */,
 				9AAAA16C1F5E934A00479999 /* AppDelegate.m in Sources */,
@@ -361,7 +361,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -369,7 +371,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -410,7 +416,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -418,7 +426,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

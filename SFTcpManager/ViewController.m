@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "TcpSocket.h"
+#import "SFTcpSocket.h"
 
-@interface ViewController ()<TcpSocketDelegate,UITextFieldDelegate>
+@interface ViewController ()<SFTcpSocketDelegate,UITextFieldDelegate>
 
-@property (nonatomic,strong) TcpSocket *tcpSocket;
+@property (nonatomic,strong) SFTcpSocket *tcpSocket;
 
 @property (weak, nonatomic) IBOutlet UITextView *showMessageTextView;
 @property (weak, nonatomic) IBOutlet UITextField *remotePortTextField;
@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tcpSocket = [TcpSocket shareTcpSocket];
+    self.tcpSocket = [SFTcpSocket shareTcpSocket];
     [self.tcpSocket addDelegate:self];
     self.remoteIpTextField.delegate = self;
     self.remotePortTextField.delegate = self;
@@ -83,13 +83,13 @@
     }
 }
 
-- (void)tcpSocket:(TcpSocket *)udpSocket connectStatus:(BOOL)connect {
+- (void)tcpSocket:(SFTcpSocket *)udpSocket connectStatus:(BOOL)connect {
     SLOG(@"tcp状态改变：%d",connect);
     [self.connectBtn setTitle:connect?@"断开":@"连接" forState:UIControlStateNormal];
     self.showMessageTextView.text = @"";
 }
 
-- (void)tcpSocket:(TcpSocket *)udpSocket receverData:(NSString *)data {
+- (void)tcpSocket:(SFTcpSocket *)udpSocket receverData:(NSString *)data {
     SLOG(@"tcp收到：%@",data);
     self.showMessageTextView.text = data;
 }

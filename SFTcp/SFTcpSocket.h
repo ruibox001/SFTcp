@@ -17,17 +17,17 @@
 #define SLOG(...)
 #endif
 
-@class TcpSocket;
+@class SFTcpSocket;
 
-@protocol TcpSocketDelegate <NSObject>
+@protocol SFTcpSocketDelegate <NSObject>
 @optional
 
-- (void)tcpSocket:(TcpSocket *)udpSocket receverData:(NSString *)data;
-- (void)tcpSocket:(TcpSocket *)udpSocket connectStatus:(BOOL)connect;
+- (void)tcpSocket:(SFTcpSocket *)udpSocket receverData:(NSString *)data;
+- (void)tcpSocket:(SFTcpSocket *)udpSocket connectStatus:(BOOL)connect;
 
 @end
 
-@interface TcpSocket : NSObject
+@interface SFTcpSocket : NSObject
 
 @property (nonatomic, strong) SocketBgAutoHandler *handle;
 
@@ -51,9 +51,9 @@
 - (void)sendString:(NSString *)string;
 
 #pragma mark - 添加代理
-- (void)addDelegate:(id<TcpSocketDelegate>)delegate;
+- (void)addDelegate:(id<SFTcpSocketDelegate>)delegate;
 
 #pragma mark - 移除代理
-- (void)removeDelegate:(id<TcpSocketDelegate>)delegate;
+- (void)removeDelegate:(id<SFTcpSocketDelegate>)delegate;
 
 @end
