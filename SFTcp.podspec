@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'SFTcp'
-s.version     = '1.0.2'
+s.version     = '2.0.0'
 s.authors     = { 'ruibox001' => 'wangshengyuancrazy@163.com' }
 s.homepage    = 'https://github.com/ruibox001/SFTcp'
 s.summary     = 'SFTcp 是封装了Tcp请求类，使用方便，源码开放'
